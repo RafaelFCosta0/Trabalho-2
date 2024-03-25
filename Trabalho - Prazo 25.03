@@ -1,0 +1,40 @@
+print('Hello world!')
+# Variáveis para armazenar os números
+numero1 = 6
+numero2 = 4
+numero3 = 2021
+numero4 = 17
+
+# Variáveis para armazenar a frase e a palavra
+frase = "Saudar a mandioca"
+palavra = "millennium"
+
+# Calculando a média aritmética
+media = (numero1 + numero2 + numero3 + numero4) / 4
+
+# Calculando o quadrado de um dos números
+quadrado_numero = numero3 ** 2
+
+# Calculando o dobro de um dos números
+dobro_numero = numero4 * 2
+
+# Contando a quantidade de letras da palavra
+quantidade_letras = len(palavra)
+
+# Contando a quantidade de espaços em branco da frase
+quantidade_espacos = frase.count(' ')
+
+# Verificando se o primeiro número é maior que o segundo
+primeiro_maior = numero1 > numero2
+
+# Encontrando o maior número
+maior_numero = max(numero1, numero2, numero3, numero4)
+
+# Imprimindo os resultados
+print("Média aritmética dos números:", media)
+print("Quadrado de um dos números:", quadrado_numero)
+print("Dobro de um dos números:", dobro_numero)
+print("Quantidade de letras da palavra:", quantidade_letras)
+print("Quantidade de espaços em branco da frase:", quantidade_espacos)
+print("O primeiro número é maior que o segundo:", primeiro_maior)
+print("Maior número entre os quatro números:", maior_numero)
