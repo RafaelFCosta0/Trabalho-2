@@ -1,0 +1,56 @@
+1.  Dominar os conceitos fundamentais da computação é vantajoso ao lidar com o Direito devido à crescente interseção entre tecnologia e questões legais. O entendimento dos princípios subjacentes à computação permite aos profissionais jurídicos compreenderem melhor casos envolvendo tecnologia, como crimes cibernéticos, proteção de dados, propriedade intelectual digital, entre outros. Além disso, a compreensão da tecnologia facilita a formulação de leis e regulamentações mais adequadas a um mundo cada vez mais digitalizado.
+
+2.  
+  a) Algoritmo: Um conjunto finito de instruções bem definidas e ordenadas que realizam uma tarefa ou resolvem um problema.
+  b) Nuvem: Refere-se a recursos computacionais (armazenamento, processamento, etc.) disponibilizados pela internet e acessados remotamente sob demanda.
+  c) Servidor: Um computador ou sistema de computadores responsável por fornecer serviços ou recursos para outros dispositivos, conhecidos como clientes, em uma rede.
+  d) Neutralidade da rede: Princípio que defende que todo o tráfego de internet deve ser tratado de forma igualitária, sem discriminação ou priorização por parte dos provedores de serviços de internet.
+  e) Arquivo: Uma unidade de armazenamento que contém dados organizados de acordo com um formato específico e geralmente é acessado por um programa de computador.
+
+3.  Na palavra "Internet", diferentes conceitos como máquinas, cabos, programas e dados são organizados como componentes interconectados de uma rede global de computadores que permite a comunicação e o compartilhamento de informações em escala mundial.
+
+4.  Os computadores foram inventados para automatizar tarefas, aumentar a eficiência e capacidade de processamento de informações, e permitir a realização de tarefas complexas de forma rápida e precisa. Embora precisem ser programados, sua capacidade de execução de tarefas vai além do que os humanos podem fazer, lidando com grandes volumes de dados e realizando cálculos complexos em uma fração de tempo.
+
+5.  Uma rede neural artificial não pode tomar decisões médicas ou de concessão de empréstimos porque sua capacidade de aprendizado é baseada em dados históricos e padrões identificados, mas não compreende o contexto ou a ética envolvida nessas decisões. Algoritmos de IA mais específicos e modelos treinados com dados relevantes e éticos podem ser utilizados para ajudar em tarefas como diagnósticos médicos ou avaliação de riscos de empréstimos, mas sempre com supervisão humana.
+
+6.  Um arquivo "binário" contém dados em formato binário, ou seja, representados em zeros e uns, enquanto um arquivo "de texto" contém dados em formato legível por humanos, como caracteres alfabéticos, números e símbolos.
+
+7.  Um formato proprietário de arquivos é controlado por uma entidade específica e pode exigir o pagamento de licenças para ser acessado ou modificado, enquanto um formato aberto de arquivos é livremente acessível e geralmente é suportado por diversas plataformas e aplicativos. No cenário da divulgação e manutenção de dados públicos, o uso de formatos abertos é preferível para promover a transparência e a interoperabilidade.
+
+8.  Um protocolo de comunicação aberto é um padrão aberto que permite a comunicação entre sistemas de diferentes fornecedores, promovendo a interoperabilidade e a inovação. Por outro lado, um protocolo de comunicação proprietário é controlado por uma única entidade e pode restringir a compatibilidade com sistemas de terceiros, limitando a liberdade econômica e a criação de novas aplicações para internet.
+
+9.  
+  a) Um sistema operacional é um software que gerencia os recursos de hardware de um computador e fornece serviços aos programas do computador e aos usuários.
+  b) Não, existem vários sistemas operacionais disponíveis, como Windows, macOS, Linux, etc.
+  c) Vender computadores obrigatoriamente ativados com um sistema operacional pode ser considerado "venda casada" se não houver opção para o consumidor escolher um sistema operacional diferente ou nenhum sistema operacional.
+
+10.  
+  a) A abrangência da LGPD inclui datacenters em países estrangeiros se estes estiverem processando dados pessoais de indivíduos brasileiros.
+  b)Em relação ao conteúdo que destrói reputações, sabidamente falso, os servidores de aplicação devem agir rapidamente para remover ou desacelerar sua propagação, evitando danos adicionais às pessoas afetadas.
+
+11.  
+  a) As estruturas de repetição utilizadas são o "for" e o "while".
+  b) Os blocos de comando são definidos pelo recuo (indentação) do código.
+  c) As duas principais operações realizadas pelo operador + em Python são a adição aritmética (soma de números) e a concatenação de strings (união de cadeias de caracteres).
+  d) Uma função em Python é um bloco de código reutilizável que realiza uma tarefa específica.
+  e) Definimos uma função em Python usando a palavra-chave "def" seguida pelo nome da função, parênteses contendo os parâmetros da função e dois pontos, seguido pelo bloco de código da função.
+  f) As estruturas de tomada de decisão da linguagem Python incluem "if", "elif" e "else". Um exemplo de cada uma delas seria:
+
+python
+Copy code
+
+x = 10
+if x > 5:
+    print("x é maior do que 5")
+
+y = 7
+if y > 10:
+    print("y é maior do que 10")
+elif y > 5:
+    print("y é maior do que 5, mas não maior do que 10")
+
+z = 3
+if z > 5:
+    print("z é maior do que 5")
+else:
+    print("z não é maior do que 5")
