@@ -1,0 +1,43 @@
+# Função para pedir o nome do usuário e gravar em um arquivo de texto
+def gravar_nome_arquivo():
+    nome = input("Digite seu nome: ")
+    with open("nome.txt", "w") as arquivo:
+        arquivo.write(nome)
+
+# Função para imprimir o conteúdo de um arquivo de texto
+def imprimir_conteudo_arquivo(nome_arquivo):
+    with open(nome_arquivo, "r") as arquivo:
+        conteudo = arquivo.read()
+        print(conteudo)
+
+# Função para copiar o conteúdo de um arquivo para outro
+def copiar_conteudo_arquivo():
+    with open("arquivo_exemplo.txt", "r") as arquivo_origem:
+        conteudo = arquivo_origem.read()
+        with open("novo_arquivo.txt", "w") as arquivo_destino:
+            arquivo_destino.write(conteudo)
+
+# Função para encontrar e imprimir o nome correspondente a um número no arquivo de exemplo
+def encontrar_nome_por_numero():
+    numero = input("Digite um número: ")
+    with open("arquivo_exemplo.txt", "r") as arquivo:
+        linhas = arquivo.readlines()
+        for linha in linhas:
+            partes = linha.split(",")
+            if partes[0] == numero:
+                print("Nome correspondente ao número", numero + ":", partes[1].strip())
+
+if __name__ == "__main__":
+    opcao = input("Escolha uma opção:\n1 - Gravar nome em arquivo\n2 - Imprimir conteúdo de arquivo\n3 - Copiar conteúdo de arquivo\n4 - Encontrar nome por número\n")
+    
+    if opcao == "1":
+        gravar_nome_arquivo()
+    elif opcao == "2":
+        nome_arquivo = input("Digite o nome do arquivo: ")
+        imprimir_conteudo_arquivo(nome_arquivo)
+    elif opcao == "3":
+        copiar_conteudo_arquivo()
+    elif opcao == "4":
+        encontrar_nome_por_numero()
+    else:
+        print("Opção inválida")
