@@ -1,0 +1,171 @@
+## Criação de lista vazia para formatar os dados
+dados = []
+
+## Importação dos dados
+dados_unf = open('input.txt', 'r').readlines()
+
+## Formatação dos dados importados
+for dado in dados_unf:
+    dado = dado.split("\n")[0].split(",")
+    dados.append(dado)
+
+dados.pop(0)
+
+"""
+ÍNDICE:
+    0 - NOME
+    1 - CASO
+    2 - DESPESA
+    3 - RECEITA
+"""
+
+## Funções do programa
+
+def sel_a():
+    ## Pede parte do nome
+    search = input("DIGITE PARTE DO NOME DO CLIENTE: ").lower()
+
+    ## Cria um set (Lista sem elementos duplicados)
+    search_set = {""}
+
+    ## Se tem a parte do nome no cliente, envia esse nome pro set
+    for dado in dados:
+        nome_min = dado[0].lower()
+        if search in nome_min:
+            search_set.add(dado[0])
+
+    ## Imprime todo o set
+    for x in search_set:
+        print(x)
+
+def sel_b():
+    ## Pede parte do nome
+    search = input("DIGITE O NOME COMPLETO DO CLIENTE: ").lower()
+    
+    ## Cria um set (Lista sem elementos duplicados)
+    search_set = {""}
+
+    for dado in dados:
+        nome_min = dado[0].lower()
+        if search == nome_min: 
+            search_set.add(dado[1])
+
+    print("CASOS DO CLIENTE ", search.upper(), ": ")
+    for x in search_set:
+        print(x)
+
+def sel_c():
+    ## Pede parte do nome
+    search = input("DIGITE O NÚMERO DO CASO: ").lower()
+
+    for dado in dados:
+        if search == dado[1]:
+            print("\nCASO ", dado[1])
+            print("------------")
+            print("CLIENTE: ", dado[0])
+            print("DESPESA: ", dado[2])
+            print("RECEITA: ", dado[3])
+
+def sel_d():
+    sum = 0
+    for dado in dados:
+        sum += float(dado[2])
+    print("\nDESPESA TOTAL: R$", round(sum, 2))
+
+def sel_e():
+    sum = 0
+    for dado in dados:
+        sum += float(dado[3])
+    print("\nRECEITA TOTAL: R$", round(sum, 2))
+
+def sel_f():
+    despesas = []
+    for dado in dados:
+        despesas.append(float(dado[2]))
+    
+    for dado in dados:
+        if max(despesas) == float(dado[2]):
+            print("\n MAIOR DESPESA")
+            print("------------")
+            print("CLIENTE: ", dado[0])
+            print("Nº DO CASO: ", dado[1])
+            print("DESPESA: ", dado[2])
+            print("RECEITA: ", dado[3])
+
+def sel_g():
+    receitas = []
+    for dado in dados:
+        receitas.append(float(dado[3]))
+    
+    for dado in dados:
+        if max(receitas) == float(dado[3]):
+            print("\n MAIOR RECEITA")
+            print("------------")
+            print("CLIENTE: ", dado[0])
+            print("Nº DO CASO: ", dado[1])
+            print("DESPESA: ", dado[2])
+            print("RECEITA: ", dado[3])
+
+def sel_h():
+    ## Pede parte do nome
+    search = input("DIGITE O NOME COMPLETO DO CLIENTE: ").lower()
+
+    despesas_sum = 0
+    receitas_sum = 0
+
+    with open('relatorio.txt', 'w') as file:
+        file.write("RELATÓRIO - " + search.upper() + '\n')
+        file.write("---------------------------\n")
+        file.write("CASOS\n---------------------------\n")
+        for dado in dados:
+            if search == dado[0].lower():
+                file.write("|CASO " + dado[1] + ": |DESPESA: " + dado[2] + " |RECEITA: " + dado[3] + "|\n")
+                despesas_sum += float(dado[2])
+                receitas_sum += float(dado[3])
+        file.write("---------------------------\n")
+        
+        file.write("TOTAL DE DESPESAS: " + str(round(despesas_sum, 2)) + "\n")
+        file.write("TOTAL DE RECEITAS: " + str(round(receitas_sum, 2)) + "\n")
+        file.write("---------------------------\nDIFERENÇA TOTAL: " + str(round(receitas_sum - despesas_sum, 2)) + "\n")
+
+                
+
+
+## ------------------------------------------------------------------ 
+## Primeiro menu
+print(
+        '''
+        =================================
+        |                               |
+        |    VERIFICAÇÃO DE CASOS       |
+        |                               |
+        ---------------------------------
+        | A) PESQUISAR CLIENTE          |
+        | B) PESQUISAR CASOS DE CLIENTE |
+        | C) PESQUISAR CASO             |
+        | D) DESPESA TOTAL              |
+        | E) RECEITA TOTAL              |
+        | F) CLIENTE COM MAIOR DESPESA  |
+        | G) CLIENTE COM MAIOR RECEITA  |
+        | H) RELATÓRIO TOTAL DE CLIENTE |
+        =================================
+''')
+
+sel = input("SELECIONE UMA OPÇÃO: ").lower()
+
+if sel == "a":
+    sel_a()
+elif sel == "b":
+    sel_b()
+elif sel == "c":
+    sel_c()
+elif sel == "d":
+    sel_d()
+elif sel == "e":
+    sel_e()
+elif sel == "f":
+    sel_f()
+elif sel == "g":
+    sel_g()
+elif sel == "h":
+    sel_h()
